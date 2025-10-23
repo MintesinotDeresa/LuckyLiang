@@ -6,28 +6,32 @@ import Image from 'next/image'
 export default function SupportPage() {
   const faqData = [
     {
-      category: 'Our E-bikes',
+      category: 'Orders ',
       items: [
-        { question: 'Where can I find user manuals for J2 in different languages?', answer: 'You can download all J2 manuals from our official website under "Downloads".' },
-        { question: 'How do I register my e-bike?', answer: 'Go to the registration page and fill in the required details.' },
+        { question: 'How can I place an order?', answer: 'You can order directly through our website by selecting your preferred e-scooter model and completing the checkout process.".' },
+        
       ],
     },
     {
-      category: 'General',
+      category: 'Product & Performance',
       items: [
-        { question: 'What is the warranty period?', answer: 'All LuckyLiang e-bikes come with a 1-year warranty within GCC countries.' },
+        { question: 'How far can LuckyLiang e-scooters travel on a single charge?', answer: 'Most of our models offer a range between 25–60 km, depending on speed, terrain, and rider weight.' },
+         { question: 'How long does it take to fully charge the battery?', answer: 'Charging usually takes 4–6 hours for a full charge.' },
+         { question: 'Are your scooters waterproof?', answer: ' Some of Our scooters are water-resistant (IP54) — safe for light rain and splashes, but not recommended for heavy rain or submersion.Charging usually takes 4–6 hours for a full charge.' },
+         
       ],
     },
     {
-      category: 'Payment & Shipment',
+      category: 'Payments & Returns',
       items: [
-        { question: 'What payment methods are accepted?', answer: 'We accept credit cards, PayPal, and local bank transfers.' },
+        { question: 'What payment methods are accepted?', answer: 'We accept credit cards, stripe, and local bank transfers.' },
+        { question: 'Do you offer refunds or returns?',answer: 'Yes. We have a  return policy for unused scooters in original packaging. Please check our refund policy for full details'}
       ],
     },
     {
-      category: 'Accessory',
+      category: 'Support & Service',
       items: [
-        { question: 'Where can I buy replacement parts?', answer: 'All parts are available through our official store or authorized dealers.' },
+        { question: 'What should I do if my scooter has a problem?',answer:'You can reach our customer support team via email or chat, and we’ll guide you through troubleshooting or repair options' },
       ],
     },
   ]

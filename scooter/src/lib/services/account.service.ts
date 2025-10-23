@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/lib/db/auth.config"
-import dbConnect from "@/lib/db/connectDB"
+import connectDB from "@/lib/db/connectDB"
 import User from "@/lib/models/userModel"
 import bcrypt from "bcryptjs"
 
@@ -9,7 +9,7 @@ export const AccountService = {
     const session = await getServerSession(authOptions)
     if (!session?.user?.email) throw new Error("Not authenticated")
 
-    await dbConnect()
+    await connectDB()
     const user = await User.findOne({ email: session.user.email }).select("name email")
     if (!user) throw new Error("User not found")
 
@@ -17,7 +17,7 @@ export const AccountService = {
   },
 
   async updatePassword(email: string, oldPassword: string, newPassword: string) {
-    await dbConnect()
+    await connectDB()
     const user = await User.findOne({ email })
     if (!user) throw new Error("User not found")
 
@@ -31,3 +31,4 @@ export const AccountService = {
     return { message: "Password updated successfully" }
   },
 }
+
