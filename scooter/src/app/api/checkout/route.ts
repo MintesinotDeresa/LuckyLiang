@@ -24,8 +24,8 @@ export async function POST(req: Request) {
       (sum: number, item: any) => sum + item.price * item.quantity,
       0
     );
-const customer = await getCustomerDetails(userId);
-
+      const customer = await getCustomerDetails(userId);
+      console.log("customere",customer)
     const order:CreatedOrderDocument= await createOrder({userId, 
         items, 
         totalAmount, 

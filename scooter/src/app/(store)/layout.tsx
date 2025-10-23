@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 // import "../globals.css";
 import { Toaster } from "sonner";
 import { CartProvider } from "@/contexts/cart-context";
@@ -9,8 +9,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { DiscountBanner } from "@/components/discount-banner";
 
 // const geistSans = Geist({
-//     variable: "--font-geist-sans",
-//     subsets: ["latin"],
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
 // });
 
 // const geistMono = Geist_Mono({

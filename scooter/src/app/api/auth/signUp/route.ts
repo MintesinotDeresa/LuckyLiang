@@ -8,6 +8,7 @@ import {signup} from '@/lib/services/user.service'
 
 export async function POST(req: Request) {
   try{
+    await connectDB()
 const { name, email, password } = await req.json();
   if (!email || !password) return NextResponse.json({ error: "Missing fields" }, { status: 400 });
 
