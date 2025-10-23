@@ -130,7 +130,7 @@ export function SiteHeader() {
                             <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => signOut({ callbackUrl: "/" })}
+                                onClick={() => signOut({ callbackUrl: "https://luckylianguae.ae/" })}
                                 className="border-red-600 text-red-600 hover:bg-red-600/10"
                             >
                                 Logout
