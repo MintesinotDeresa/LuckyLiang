@@ -101,7 +101,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   //  Clear cart
   const clearCart = useCallback(() => {
     setItems([])
-    toast.error("Cart cleared") 
+    toast.warning("Cart cleared") 
   }, [])
 
   const itemCount = items.reduce((total, item) => total + item.quantity, 0)
