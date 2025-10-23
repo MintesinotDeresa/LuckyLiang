@@ -7,6 +7,7 @@ import NextAuthSessionProvider from "@/contexts/session-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { DiscountBanner } from "@/components/discount-banner";
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
                 <SiteHeader />
                 {children}
                 <Toaster richColors position="top-right" />
+                <WhatsAppButton/>
                 <SiteFooter />
             </CartProvider>
         </NextAuthSessionProvider>
