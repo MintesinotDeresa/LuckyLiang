@@ -130,7 +130,7 @@ export function SiteHeader() {
                             <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => signOut({ callbackUrl:process.env.NEXTAUTH_URL ||  "https://luckylianguae.ae/" })}
+                                onClick={() => signOut({ callbackUrl:process.env.NEXT_PUBLIC_BASE_URL ||  "https://luckylianguae.ae" })}
                                 className="border-red-600 text-red-600 hover:bg-red-600/10"
                             >
                                 Logout
