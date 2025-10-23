@@ -5,7 +5,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Twitter, Mail, Youtube } from "lucide-react"
+import { Facebook, Instagram, Twitter, Mail, Youtube,  } from "lucide-react"
+import { FaTiktok } from "react-icons/fa"
+
 import { useState } from "react"
 import { toast } from "sonner" 
 
@@ -104,16 +106,25 @@ export function SiteFooter() {
               performance, and style.
             </p>
             <div className="flex space-x-4">
-              {[Youtube, Facebook, Instagram, Twitter].map((Icon, idx) => (
-                <Link
-                  key={idx}
-                  href="#"
-                  className="text-white/70 hover:text-green-500 transition-colors"
-                >
-                  <Icon className="h-5 w-5" />
-                </Link>
-              ))}
-            </div>
+  {[
+    { Icon: Youtube, href: "https://www.youtube.com/@LuckyLiang-x3t" },
+    { Icon: Facebook, href: "https://web.facebook.com/people/Lucky-Liang/61572963972101/?_rdc=1&_rdr" },
+    { Icon: Instagram, href: "https://www.instagram.com/luckyliangev/" },
+    {Icon:FaTiktok,href:"https://www.tiktok.com/@luckyliangev"}
+    
+  ].map(({ Icon, href }, idx) => (
+    <Link
+      key={idx}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white/70 hover:text-green-500 transition-colors"
+    >
+      <Icon className="h-5 w-5" />
+    </Link>
+  ))}
+</div>
+
           </div>
 
           <div>
@@ -213,7 +224,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="https://www.google.com/maps/place/Lucky+Liang,+GK65A.+Dragon+mart+2+-+near+nestco+supermarket+front+gate+-+Dubai+International+City+-+Dubai+-+United+Arab+Emirates/data=!4m2!3m1!1s0x3e5f61a64cecc8ab:0xbf9d9e6203ce56f1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjM4LjIYACDXggMqqwEsOTQyNTk1NTAsOTQyNjc3MjcsOTQyODQ0NjAsOTQyMjMyOTksOTQyMTY0MTMsOTQyODA1NzYsOTQyMTI0OTYsOTQyNjc3ODcsOTQyODUwNTEsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNjI3MzMsNDcwODQzOTMsOTQyMTMyMDAsOTQyNTgzMjVCAlBL&skid=286bf9fc-e0c3-4a92-8b80-c74ab54066cb"
                   className="hover:text-green-500 transition-colors"
                 >
                   GK65A, Dragon Mart
