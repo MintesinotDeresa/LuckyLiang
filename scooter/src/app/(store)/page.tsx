@@ -67,7 +67,7 @@ export default function Home() {
         { src: "/images/U03-04(1).jpg", alt: "Modern urban scooter" },
         { src: "/images/DS01-05.jpg", alt: "Scooter in city landscape" },
         { src: "/images/L2.png", alt: "Electric scooter on the road" },
-          { src: "/images/L5.png", alt: "Electric scooter on the road" },
+          { src: "/images/L5.jpg", alt: "Electric scooter on the road" },
         { src: "/images/DS01-06.jpg", alt: "Scooter in city landscape" },
     ];
 

@@ -252,7 +252,7 @@ export function SiteHeader() {
                                     </Link>
                                     <button
                                         onClick={() =>
-                                            signOut({ callbackUrl: "/" })
+                                            signOut({ callbackUrl:process.env.NEXT_PUBLIC_BASE_URL ||  "https://luckylianguae.ae"})
                                         }
                                         className="text-lg font-medium text-red-500 text-left"
                                     >
