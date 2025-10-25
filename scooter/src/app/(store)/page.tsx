@@ -84,7 +84,7 @@ export default function Home() {
 
                     <div className="absolute inset-0 bg-black/20 backdrop-blur-[0px]" />
 
-                    <div className="container mx-auto  relative z-10 flex items-center justify-center px-6 md:px-10 py-10 min-h-[calc(100vh-70px)]">
+                    <div className="container mx-auto  relative z-10 flex items-center justify-center px-6 md:px-10 py-10 min-h-[calc(100vh-70px)] bg-black/50 ">
                         <div className="flex flex-col mt-auto text-center space-y-8 max-w-4xl p-6 sm:p-10 rounded-2xl bg-white/5  border border-white/10 ">
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
                                 <span className="text-green-600 drop-shadow-lg">
@@ -94,7 +94,7 @@ export default function Home() {
                                 of Urban Mobility
                             </h1>
 
-                            <p className="text-lg sm:text-xl text-white/90 drop-shadow-md max-w-2xl mx-auto">
+                            <p className="text-lg sm:text-xl text-white/100 drop-shadow-md max-w-2xl mx-auto">
                                 Discover premium electric scooters designed for
                                 modern commuters. Elegant design meets high
                                 performance in every ride.

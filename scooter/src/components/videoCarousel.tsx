@@ -119,7 +119,7 @@ const VideoSlideContent: React.FC<VideoSlideContentProps> = ({ video, isActive }
           className="absolute inset-0 flex flex-col justify-center items-center bg-gray-800/80 hover:bg-gray-700/80 cursor-pointer transition-all duration-300 p-8"
           onClick={handlePlayClick}
         >
-          <PlayCircle className="w-20 h-20 text-indigo-400 hover:text-indigo-300 transition-colors duration-300 drop-shadow-lg" />
+          <PlayCircle className="w-20 h-20 text-blue-400 hover:text-blue-300 transition-colors duration-300 drop-shadow-lg" />
           <p className="mt-4 text-xl font-semibold text-white">Click to Play: {video.title}</p>
           <p className="text-sm text-gray-300 mt-1">(witness our products quality)</p>
         </div>
@@ -128,12 +128,12 @@ const VideoSlideContent: React.FC<VideoSlideContentProps> = ({ video, isActive }
      
       {isLoading && (
         <div className="absolute inset-0 flex justify-center items-center bg-gray-900/90 z-10">
-          <Loader2 className="w-10 h-10 text-indigo-400 animate-spin" />
+          <Loader2 className="w-10 h-10 text-blue-400 animate-spin" />
         </div>
       )}
 
     
-      <div className="absolute top-4 left-4 bg-indigo-600/90 text-white text-xs font-mono tracking-wider px-3 py-1 rounded-full shadow-md z-20">
+      <div className="absolute top-4 left-4 bg-blue-400 text-white text-xs font-mono tracking-wider px-3 py-1 rounded-full shadow-md z-20">
         {isYoutubeVideo ? 'YOUTUBE' : 'LOCAL MP4'}
       </div>
     </div>
