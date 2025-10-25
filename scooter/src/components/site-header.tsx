@@ -18,6 +18,10 @@ export function SiteHeader() {
     const isLoggedIn = !!session;
     const { itemCount } = useCart();
 
+    const handleSignOut = async () => {
+        await signOut({ callbackUrl: "/", redirect: false });
+    };
+
     return (
         <header className="sticky top-0 z-50 w-full bg-[#0D1F3C]/90 backdrop-blur-md border-b border-white/20">
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-10">
@@ -130,7 +134,7 @@ export function SiteHeader() {
                             <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => signOut({ callbackUrl:process.env.NEXT_PUBLIC_BASE_URL ||  "https://luckylianguae.ae" })}
+                                onClick={handleSignOut}
                                 className="border-red-600 text-red-600 hover:bg-red-600/10"
                             >
                                 Logout
@@ -251,9 +255,7 @@ export function SiteHeader() {
                                         Account
                                     </Link>
                                     <button
-                                        onClick={() =>
-                                            signOut({ callbackUrl:process.env.NEXT_PUBLIC_BASE_URL ||  "https://luckylianguae.ae"})
-                                        }
+                                        onClick={handleSignOut}
                                         className="text-lg font-medium text-red-500 text-left"
                                     >
                                         Logout
