@@ -22,7 +22,7 @@ import FullBackgroundSlider from "@/components/BackgroundImageSlider";
 import VideoCarousel from "@/components/videoCarousel";
 
 export default function Home() {
-    // 1. State for real data, replacing mock data initialization
+    
     const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
     const [displayCategories, setDisplayCategories] = useState<Category[]>([]);
     const [allCategories, setAllCategories] = useState<Category[]>([]);
@@ -75,56 +75,60 @@ export default function Home() {
 
     return (
         <div className="min-h-screen flex flex-col   ">
-            <main className="flex-1  ">
-                <section className="relative text-white  flex items-center overflow-hidden">
-                    <FullBackgroundSlider
-                        images={BACKGROUND_IMAGES}
-                        interval={SLIDE_INTERVAL}
-                    />
+          <main className="flex-1">
+<section className="relative text-white flex flex-col flex-grow items-stretch overflow-hidden h-full">
+    
+    <FullBackgroundSlider
+        images={BACKGROUND_IMAGES}
+        interval={SLIDE_INTERVAL}
+    />
 
-                    <div className="absolute inset-0 bg-black/20 backdrop-blur-[0px]" />
+    
+    <div className="absolute inset-0 bg-black/20 backdrop-blur-[0px]" />
 
-                    <div className="container mx-auto  relative z-10 flex items-center justify-center px-6 md:px-10 py-10 min-h-[calc(100vh-70px)] bg-black/50 ">
-                        <div className="flex flex-col mt-auto text-center space-y-8 max-w-4xl p-6 sm:p-10 rounded-2xl bg-white/5  border border-white/10 ">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
-                                <span className="text-green-600 drop-shadow-lg">
-                                    Ride the Future
-                                </span>{" "}
-                                <br />
-                                of Urban Mobility
-                            </h1>
+    <div className="container mx-auto relative z-10 flex flex-col flex-grow items-center justify-center px-6 md:px-10 py-10 min-h-[calc(100vh-70px)] bg-black/50">
+        <div className="flex flex-col mt-auto text-center space-y-8 max-w-4xl p-6 sm:p-10 rounded-2xl bg-white/5 border border-white/10 ">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tighter">
+                <span className="text-green-600 drop-shadow-lg">
+                    Ride the Future
+                </span>{" "}
+                <br />
+                of Urban Mobility
+            </h1>
 
-                            <p className="text-lg sm:text-xl text-white/100 drop-shadow-md max-w-2xl mx-auto">
-                                Discover premium electric scooters designed for
-                                modern commuters. Elegant design meets high
-                                performance in every ride.
-                            </p>
+            <p className="text-lg sm:text-xl text-white/100 drop-shadow-md max-w-2xl mx-auto">
+                Discover premium electric scooters designed for modern
+                commuters. Elegant design meets high performance in every ride.
+            </p>
 
-                            <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
-                                <Link href="/products">
-                                    <Button
-                                        size="lg"
-                                        variant="secondary"
-                                        className="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-medium"
-                                    >
-                                        Shop Now
-                                        <ArrowRight className="ml-2 h-5 w-5" />
-                                    </Button>
-                                </Link>
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
+                <Link href="/products">
+                    <Button
+                        size="lg"
+                        variant="secondary"
+                        className="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-medium"
+                    >
+                        Shop Now
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                </Link>
 
-                                <Link href="/categories">
-                                    <Button
-                                        size="lg"
-                                        variant="outline"
-                                        className="w-full sm:w-auto border-white text-green-700 hover:bg-white hover:text-[#0D1F3C] font-medium"
-                                    >
-                                        Browse Categories
-                                    </Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Link href="/categories">
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="w-full sm:w-auto border-white text-green-700 hover:bg-white hover:text-[#0D1F3C] font-medium"
+                    >
+                        Browse Categories
+                    </Button>
+                </Link>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
                 <section className="py-24 md:py-32 bg-gray-950 min-h-[50vh]">
                     <div className="max-w-7xl mx-auto px-6">
@@ -205,8 +209,8 @@ export default function Home() {
 
                 <section className="py-8 p-8 bg-gradient-to-b">
                     <div className="container mx-auto">
-                        <div className="flex items-center justify-between mb-8">
-                            <div>
+                        
+                            <div className="text-center mb-15 mt-6"> 
                                 <h2 className="font-sanserif text-3xl md:text-4xl font-bold mb-2 items-center text-green-700">
                                     {" "}
                                     Top Scooters
@@ -214,13 +218,6 @@ export default function Home() {
                                 <p className="text-muted-foreground">
                                     Our most popular models loved by riders
                                 </p>
-                            </div>
-                            <Link href="/products">
-                                <Button variant="outline">
-                                    View All
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </Button>
-                            </Link>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {featuredProducts?.map((product) => (
@@ -241,11 +238,21 @@ export default function Home() {
                                 />
                             ))}
                         </div>
+                                                        <div className="mt-10 flex justify-end px-5">
+                                <Link href="/products">
+                                    <Button variant="secondary">
+                                    View All
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </Link>
+                                </div>
+
+                       
                     </div>
                 </section>
 
-                <section className="py-16 bg-muted/30">
-                    <div className="container mx-auto">
+                <section className="py-8 bg-muted/30 px-10">
+                    <div className="container ">
                         <div className="text-center mb-12">
                             <h2 className=" text-3xl md:text-4xl font-bold mb-2 text-green-700">
                                 Shop by Category
@@ -267,6 +274,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
                 <>
                     <VideoCarousel />
                 </>
