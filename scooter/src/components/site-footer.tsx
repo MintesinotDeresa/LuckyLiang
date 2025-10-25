@@ -47,7 +47,7 @@ export function SiteFooter() {
     };
 
     return (
-        <footer className="bg-[#0D1F3C] text-white">
+        <footer className="bg-gray-950  text-white min-h-screen">
             <div className="bg-[#f8f8ff] py-16 border-b border-gray-200">
                 <div className="container mx-auto text-center px-4">
                     <Mail className="mx-auto h-10 w-10 mb-4 text-green-600" />
@@ -85,7 +85,7 @@ export function SiteFooter() {
                 className="container mx-auto py-16 px-4"
                 style={{
                     backgroundImage:
-                        "linear-gradient(to bottom, rgba(13, 31, 60, 0.0) 0%, #0D1F3C 100%)",
+                        "linear-gradient(to bottom, rgba(13, 31, 60, 0.0) 0%, bg-gray-950)",
                 }}
             >
                 <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -95,7 +95,7 @@ export function SiteFooter() {
                             className="flex items-center space-x-2 mb-4"
                         >
                             <Image
-                                src="/images/Logo (Lucky liang)-2.png"
+                                src="/images/logo.png"
                                 alt="Company Logo"
                                 width={180}
                                 height={40}
@@ -112,7 +112,7 @@ export function SiteFooter() {
                                     <Link
                                         key={idx}
                                         href="#"
-                                        className="text-white/70 hover:text-green-500 transition-colors"
+                                        className="text-green-500 hover:text-white/90 transition-colors"
                                     >
                                         <Icon className="h-5 w-5" />
                                     </Link>
@@ -122,7 +122,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold mb-4">Shop</h4>
+                        <h4 className="font-semibold mb-4 text-green-400">Shop</h4>
                         <ul className="space-y-2 text-sm text-white/70">
                             <li>
                                 <Link
@@ -148,19 +148,12 @@ export function SiteFooter() {
                                     Featured
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    href="#"
-                                    className="hover:text-green-500 transition-colors"
-                                >
-                                    Sale
-                                </Link>
-                            </li>
+                           
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-semibold mb-4">Service</h4>
+                        <h4 className="font-semibold mb-4 text-green-400">Service</h4>
                         <ul className="space-y-2 text-sm text-white/70">
                             <li>
                                 <Link
@@ -170,22 +163,8 @@ export function SiteFooter() {
                                     Customer Support
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    href="/faq"
-                                    className="hover:text-green-500 transition-colors"
-                                >
-                                    Service Center
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/shipping"
-                                    className="hover:text-green-500 transition-colors"
-                                >
-                                    Find A Store
-                                </Link>
-                            </li>
+                            
+                            
                             <li>
                                 <Link
                                     href="/service/return"
@@ -206,7 +185,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold mb-4">Contact Us</h4>
+                        <h4 className="font-semibold mb-4 text-green-400">Contact Us</h4>
                         <ul className="space-y-2 text-sm text-white/70">
                             <li>
                                 <Link
@@ -236,7 +215,7 @@ export function SiteFooter() {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold mb-4">Company</h4>
+                        <h4 className="font-semibold mb-4 text-green-400">Company</h4>
                         <ul className="space-y-2 text-sm text-white/70">
                             <li>
                                 <Link
@@ -267,7 +246,7 @@ export function SiteFooter() {
                 </div>
             </div>
 
-            <div className="border-t border-white/20 py-6">
+            <div className="border-t border-white/20 py-6 mt-30 mb-0">
                 <div className="container mx-auto text-center text-white/70 text-sm">
                     © {new Date().getFullYear()} Lucky Liang. All rights
                     reserved.
