@@ -61,7 +61,7 @@ export default function ReturnPolicyPage() {
                 href="mailto:support@luckyliang.com"
                 className="text-green-400 underline"
               >
-                support@luckyliang.com
+                luckyliangevuae@gmail.com
               </a>
               .
             </p>

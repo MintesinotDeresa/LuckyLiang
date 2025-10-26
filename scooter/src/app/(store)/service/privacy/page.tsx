@@ -111,10 +111,10 @@ export default function PrivacyPolicyPage() {
               including contract performance, legitimate interest, and user
               consent. For questions, contact{" "}
               <a
-                href="mailto:support@luckyliang.com"
+                href="mailto:luckyliangevuae@gmail.com"
                 className="text-green-600 underline"
               >
-                support@luckyliang.com
+                luckyliangevuae@gmail.com
               </a>
               .
             </p>

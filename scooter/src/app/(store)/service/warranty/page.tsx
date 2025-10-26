@@ -21,7 +21,7 @@ export default function WarrantyPage() {
               <li>The warranty excludes consumables, wear and tear, unauthorized parts, misuse, neglect, alterations, improper assembly, extreme riding, water damage, and unauthorized repairs.</li>
               <li>Warranty is void if you modify the product, including using third-party apps to change motor settings.</li>
               <li>Warranty applies only to LuckyLiang-branded products sold through our official store. For other purchases, contact your local dealer.</li>
-              <li>For detailed component warranty periods, contact <a href="mailto:support@luckyliang.com" className="text-green-400 underline">support@luckyliang.com</a>.</li>
+              <li>For detailed component warranty periods, contact <a href="mailto:support@luckyliang.com" className="text-green-400 underline">luckyliangevuae@gmail.com</a>.</li>
             </ol>
           </section>
 
