@@ -1,11 +1,14 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { getOrderByID, deleteOrderById } from '@/lib/services/order.service';
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/db/auth.config";
+import Order from "@/lib/models/orderModel";
 
 export async function GET(
   request: NextRequest,
-  context: { params: Promise<{ id: string }> } // ✅ match folder name
+  context: { params: Promise<{ id: string }> } 
 ) {
-  const { id } = await context.params; // ✅ match folder param
+  const { id } = await context.params; 
 
   if (!id) {
     return NextResponse.json({ message: 'Order ID is required' }, { status: 400 });
@@ -25,20 +28,20 @@ export async function GET(
   }
 }
 
-export async function DELETE(
-  request: NextRequest,
-  context: { params: Promise<{ id: string }> }
-) {
-  const { id } = await context.params;
-
+export async function DELETE() {
   try {
-    const result = await deleteOrderById(id);
-    return NextResponse.json(result);
+    
+    const session = await getServerSession(authOptions);
+
+    if (!session?.user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    await Order.deleteMany({ userId: session.user.id });
+
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(`Error deleting order ${id}:`, error);
-    return NextResponse.json(
-      { message: (error as Error).message },
-      { status: 400 }
-    );
+    console.error("Error clearing orders:", error);
+    return NextResponse.json({ error: "Failed to clear orders" }, { status: 500 });
   }
 }

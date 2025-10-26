@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/db/auth.config";
 import Order from "@/lib/models/orderModel";
 import  connectDB  from "@/lib/db/connectDB";
+import { getUserOrders } from "@/lib/services/order.service";
 
 export async function GET(req: Request) {
   try {
@@ -19,7 +20,7 @@ export async function GET(req: Request) {
 
     const userId = session.user.id;
 
-    const orders = await Order.find({ userId }).sort({ createdAt: -1 }).lean();
+    const orders = await getUserOrders(userId )
 
     return NextResponse.json({ success: true, data: orders });
   } catch (error: any) {
