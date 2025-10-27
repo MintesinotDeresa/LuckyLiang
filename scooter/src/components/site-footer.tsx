@@ -108,7 +108,7 @@ export function SiteFooter() {
                         </p>
                          <div className="flex space-x-4">
       <Link
-        href="https://www.youtube.com/@yourchannel"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
         className="text-green-500 hover:text-white/90 transition-colors"
