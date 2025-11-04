@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
     "@auth/mongodb-adapter": "^3.11.0",
+    "@next/third-parties": "^16.0.1",
     "@polar-sh/nextjs": "^0.4.9",
     "@polar-sh/sdk": "^0.37.0",
     "@radix-ui/react-avatar": "^1.1.10",
