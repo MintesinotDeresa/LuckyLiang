@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { MessageCircle } from "lucide-react"
+import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "+971585463221" 
-  const message = "Hello! I'm interested in your products." 
+  const phoneNumber = "+971585463221";
+  const message = "Hello! I'm interested in your products.";
 
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <Link
@@ -19,5 +19,5 @@ export default function WhatsAppButton() {
     >
       <MessageCircle className="w-6 h-6" />
     </Link>
-  )
+  );
 }
